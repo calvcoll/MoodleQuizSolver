@@ -1,16 +1,11 @@
-#-------------------------------------------------------------------------------
-# Name:        module1
-# Purpose:
-#
-# Author:      bgs8176
-#
-# Created:     10/01/2013
-# Copyright:   (c) bgs8176 2013
-# Licence:     <your licence>
-#-------------------------------------------------------------------------------
+#!/usr/bin/python
 
+import dryscrape as ds
+import sys
+
+# Has the website code go here.
 code = '''
-<
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en" xml:lang="en">
 <head>
@@ -20,8 +15,8 @@ code = '''
 
 
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-<meta name="DC:Creator" content="bgs" />
-<meta name="DC:Title" content="Networks" />
+<meta name="DC:Creator" content="DAaid Phillips" />
+<meta name="DC:Title" content="Qulaity of Information" />
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -1274,100 +1269,100 @@ I[0][0] = 100;
 I[0][1] = '';
 I[0][2] = '0';
 I[0][3] = new Array();
-I[0][3][0] = new Array('All the computers on a peer-to-peer network are of the same status','',0,0,1);
-I[0][3][1] = new Array('Each computer on the network could have access to the resources of all the other computers on the network','',0,0,1);
-I[0][3][2] = new Array('They are popular with Internet users for sharing music fi les','',0,0,1);
-I[0][3][3] = new Array('A central server controls access to all the network resources','',1,100,1);
+I[0][3][0] = new Array('How easy the information is to understand','',0,0,1);
+I[0][3][1] = new Array('The accuracy of the information','',0,0,1);
+I[0][3][2] = new Array('How up-to-date the information is','',0,0,1);
+I[0][3][3] = new Array('How much the information cost to produce','',1,100,1);
 
 I[1] = new Array();
 I[1][0] = 100;
 I[1][1] = '';
 I[1][2] = '0';
 I[1][3] = new Array();
-I[1][3][0] = new Array('Ensuring that all the applications users have installed are the latest versions','',0,0,1);
-I[1][3][1] = new Array('Finding out if a user is using licensed software','',0,0,1);
-I[1][3][2] = new Array('Keeping a database of customers and their orders','',1,100,1);
-I[1][3][3] = new Array('Providing a remote control facility so that help-desk staff can help users sort problems out','',0,0,1);
+I[1][3][0] = new Array('High quality information reduces the risk when making decisions','',1,100,1);
+I[1][3][1] = new Array('It is impossible to make decisions without high quality information','',0,0,1);
+I[1][3][2] = new Array('Decisions can only be made using data','',0,0,1);
+I[1][3][3] = new Array('Information is turned into data for decision making','',0,0,1);
 
 I[2] = new Array();
 I[2][0] = 100;
 I[2][1] = '';
 I[2][2] = '0';
 I[2][3] = new Array();
-I[2][3][0] = new Array('Bus','',0,0,1);
-I[2][3][1] = new Array('Ring','',0,0,1);
-I[2][3][2] = new Array('Mesh','',0,0,1);
-I[2][3][3] = new Array('Star','',1,100,1);
+I[2][3][0] = new Array('Accuracy','',0,0,1);
+I[2][3][1] = new Array('Relevance for a particular use','',0,0,1);
+I[2][3][2] = new Array('The completeness of the information','',0,0,1);
+I[2][3][3] = new Array('Whether or not the information has been produced using ICT','',1,100,1);
 
 I[3] = new Array();
 I[3][0] = 100;
 I[3][1] = '';
 I[3][2] = '0';
 I[3][3] = new Array();
-I[3][3][0] = new Array('Bus','',0,0,1);
-I[3][3][1] = new Array('Ring','',0,0,1);
-I[3][3][2] = new Array('Mesh','',1,100,1);
-I[3][3][3] = new Array('Star','',0,0,1);
+I[3][3][0] = new Array('The information is not accurate','',0,0,1);
+I[3][3][1] = new Array('The information is not easy to understand','',0,0,1);
+I[3][3][2] = new Array('The information is incomplete','',0,0,1);
+I[3][3][3] = new Array('The information has not been targeted correctly','',1,100,1);
 
 I[4] = new Array();
 I[4][0] = 100;
 I[4][1] = '';
 I[4][2] = '0';
 I[4][3] = new Array();
-I[4][3][0] = new Array('Staffing costs','',0,0,1);
-I[4][3][1] = new Array('Data entry costs','',1,100,1);
-I[4][3][2] = new Array('Training costs','',0,0,1);
-I[4][3][3] = new Array('Cost of third party communication lines','',0,0,1);
+I[4][3][0] = new Array('Incomplete','',0,0,1);
+I[4][3][1] = new Array('Correctly targeted','',0,0,1);
+I[4][3][2] = new Array('Not up-to-date','',1,100,1);
+I[4][3][3] = new Array('Not easy to understand','',0,0,1);
 
 I[5] = new Array();
 I[5][0] = 100;
 I[5][1] = '';
 I[5][2] = '0';
 I[5][3] = new Array();
-I[5][3][0] = new Array('Backups cannot be made centrally','',1,100,1);
-I[5][3][1] = new Array('There is no network manager in overall charge of the network','',0,0,1);
-I[5][3][2] = new Array('There are lower operating costs','',0,0,1);
-I[5][3][3] = new Array('They are very easy to set up','',0,0,1);
+I[5][3][0] = new Array('It is not relevant','',0,0,1);
+I[5][3][1] = new Array('It is not up-to-date','',0,0,1);
+I[5][3][2] = new Array('It is not complete','',0,0,1);
+I[5][3][3] = new Array('It is not easy to understand','',1,100,1);
 
 I[6] = new Array();
 I[6][0] = 100;
 I[6][1] = '';
 I[6][2] = '0';
 I[6][3] = new Array();
-I[6][3][0] = new Array('They are expensive because expensive servers are needed','',0,0,1);
-I[6][3][1] = new Array('Security is improved because a single person is given responsibility for the whole network','',1,100,1);
-I[6][3][2] = new Array('Specialist knowledge is needed to set them up','',0,0,1);
-I[6][3][3] = new Array('The software needed is sophisticated and expensive','',0,0,1);
+I[6][3][0] = new Array('Lack of user confidence','',1,100,1);
+I[6][3][1] = new Array('Lack of user awareness','',0,0,1);
+I[6][3][2] = new Array('Lack of targeting of the information','',0,0,1);
+I[6][3][3] = new Array('Lack of completeness of the information','',0,0,1);
 
 I[7] = new Array();
 I[7][0] = 100;
 I[7][1] = '';
 I[7][2] = '0';
 I[7][3] = new Array();
-I[7][3][0] = new Array('Star','',0,0,1);
-I[7][3][1] = new Array('Bus','',0,0,1);
-I[7][3][2] = new Array('Sun','',1,100,1);
-I[7][3][3] = new Array('Ring','',0,0,1);
+I[7][3][0] = new Array('Moving house','',0,0,1);
+I[7][3][1] = new Array('Change of name','',0,0,1);
+I[7][3][2] = new Array('Change of bank account details','',0,0,1);
+I[7][3][3] = new Array('Change of car','',1,100,1);
 
 I[8] = new Array();
 I[8][0] = 100;
 I[8][1] = '';
 I[8][2] = '0';
 I[8][3] = new Array();
-I[8][3][0] = new Array('Password','',1,100,1);
-I[8][3][1] = new Array('Username','',0,0,1);
-I[8][3][2] = new Array('User log','',0,0,1);
-I[8][3][3] = new Array('User account','',0,0,1);
+I[8][3][0] = new Array('A web page containing information about a school','',0,0,1);
+I[8][3][1] = new Array('Information on an intranet','',0,0,1);
+I[8][3][2] = new Array('Paper-based records','',1,100,1);
+I[8][3][3] = new Array('The Internet','',0,0,1);
 
 I[9] = new Array();
 I[9][0] = 100;
 I[9][1] = '';
 I[9][2] = '0';
 I[9][3] = new Array();
-I[9][3][0] = new Array('Use of passwords and user-IDs ensures that access is restricted to authorised users','',0,0,1);
-I[9][3][1] = new Array('Firewalls can be software, hardware or both and protect the network from hackers','',0,0,1);
-I[9][3][2] = new Array('Encryption is used to keep data secret when being sent over networks','',0,0,1);
-I[9][3][3] = new Array('Log-in means informing the network you want to close access to the network facilities','',1,100,1);
+I[9][3][0] = new Array('On-line information can be accessed by everyone in the organisation','',0,0,1);
+I[9][3][1] = new Array('Keeping information on-line saves storage space','',0,0,1);
+I[9][3][2] = new Array('It is much easier to find the information on-line','',0,0,1);
+I[9][3][3] = new Array('Information sources on-line are more accurate','',1,100,1);
 
 
 function StartUp(){
@@ -1482,9 +1477,10 @@ function CheckMCAnswer(QNum, ANum, Btn){
 //Increment the number of tries
 	State[QNum][2]++;
 
-//Add the percent-correct value of this ans</br	State[QNum][3] += I[QNum][3][ANum][3];
+//Add the percent-correct value of this answer
+	State[QNum][3] += I[QNum][3][ANum][3];
 
-//Store the try number in the answer part of the State array, for tracking purposes
+//Store the try number in the answer part of the State array, for tr</brng purposes
 	State[QNum][1][ANum] = State[QNum][2];
 	if (State[QNum][5].length > 0){State[QNum][5] += ' | ';}
 	State[QNum][5] += String.fromCharCode(65+ANum);
@@ -1707,8 +1703,8 @@ function CheckFinished(){
 <![endif]-->
 
 
-    <meta name="keywords" content="moodle, ICTA2: CH1 Networks " />
-    <title>ICTA2: CH1 Networks</title>
+    <meta name="keywords" content="moodle, AS_WJEC_ICT: T3 - Quality of Information " />
+    <title>AS_WJEC_ICT: T3 - Quality of Information</title>
     <link rel="shortcut icon" href="http://websites.bordengrammar.kent.sch.uk/moodle/theme/prettysimple/favicon.ico" />
     <!--<style type="text/css">/*<![CDATA[*/ body{behavior:url(http://websites.bordengrammar.kent.sch.uk/moodle/lib/csshover.htc);} /*]]>*/</style>-->
 
@@ -1803,15 +1799,15 @@ function getElementsByClassName(oElm, strTagName, oClassNames){
 <!--End of Menu-->
 </head>
 
-<body  onload="StartUp()"  class="mod-hotpot course-453 dir-ltr lang-en_utf8" id="mod-hotpot-view">
+<body  onload="StartUp()"  class="mod-hotpot course-201 dir-ltr lang-en_utf8" id="mod-hotpot-view">
 
 <div id="page">
 
     <div id="header" class=" clearfix">        <h1 class="headermain">&nbsp;</h1>
-        <div class="headermenu"><div class="logininfo">You are logged in as <a  href="http://websites.bordengrammar.kent.sch.uk/moodle/user/view.php?id=354&amp;course=453">Calvin Collins</a>  (<a  href="http://websites.bordengrammar.kent.sch.uk/moodle/login/logout.php?sesskey=H9UAY8HseJ">Logout</a>)</div></div>
+        <div class="headermenu"><div class="logininfo">You are logged in as <a  href="http://websites.bordengrammar.kent.sch.uk/moodle/user/view.php?id=354&amp;course=201">Calvin Collins</a>  (<a  href="http://websites.bordengrammar.kent.sch.uk/moodle/login/logout.php?sesskey=0DFbJ6YTXY">Logout</a>)</div></div>
     </div>    <div class="navbar clearfix">
         <div class="breadcrumb"><h2 class="accesshide " >You are here</h2> <ul>
-<li class="first"><a  onclick="this.target='_top'" href="http://websites.bordengrammar.kent.sch.uk/moodle/">BGS-VLE</a></li><li> <span class="accesshide " >/&nbsp;</span><span class="arrow sep">&#x25BA;</span> <a  onclick="this.target='_top'" href="http://websites.bordengrammar.kent.sch.uk/moodle/course/view.php?id=453">ICTA2</a></li><li> <span class="accesshide " >/&nbsp;</span><span class="arrow sep">&#x25BA;</span> <a  onclick="this.target='_top'" href="http://websites.bordengrammar.kent.sch.uk/moodle/mod/hotpot/index.php?id=453">Hot Potatoes Quizzes</a></li><li> <span class="accesshide " >/&nbsp;</span><span class="arrow sep">&#x25BA;</span> CH1 Networks</li></ul></div>
+<li class="first"><a  onclick="this.target='_top'" href="http://websites.bordengrammar.kent.sch.uk/moodle/">BGS-VLE</a></li><li> <span class="accesshide " >/&nbsp;</span><span class="arrow sep">&#x25BA;</span> <a  onclick="this.target='_top'" href="http://websites.bordengrammar.kent.sch.uk/moodle/course/view.php?id=201">AS_WJEC_ICT</a></li><li> <span class="accesshide " >/&nbsp;</span><span class="arrow sep">&#x25BA;</span> <a  onclick="this.target='_top'" href="http://websites.bordengrammar.kent.sch.uk/moodle/mod/hotpot/index.php?id=201">Hot Potatoes Quizzes</a></li><li> <span class="accesshide " >/&nbsp;</span><span class="arrow sep">&#x25BA;</span> T3 - Quality of Information</li></ul></div>
         <div class="navbutton"><div style="font-size:0.75em;"></div></div>
     </div>
     <!-- END OF HEADER -->
@@ -1820,7 +1816,7 @@ function getElementsByClassName(oElm, strTagName, oClassNames){
 
 
 <div class="Titles">
-	<h2 class="ExerciseTitle">Networks</h2>
+	<h2 class="ExerciseTitle">Qulaity of Information</h2>
 
 	<h3 class="ExerciseSubtitle">Quiz</h3>
 
@@ -1855,65 +1851,65 @@ function getElementsByClassName(oElm, strTagName, oClassNames){
 </div>
 
 <ol class="QuizQuestions" id="Questions">
-<li class="QuizQuestion" id="Q_0" style="display: none;"><p class="QuestionText">Which one of the following statements about peer-to-peer networking is incorrect?</p><ol class="MCAnswers">
-<li id="Q_0_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;All the computers on a peer-to-peer network are of the same status</li>
-<li id="Q_0_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Each computer on the network could have access to the resources of all the other computers on the network</li>
-<li id="Q_0_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;They are popular with Internet users for sharing music fi les</li>
-<li id="Q_0_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;A central server controls access to all the network resources</li>
+<li class="QuizQuestion" id="Q_0" style="display: none;"><p class="QuestionText">Which one of these is not a measure of the quality of information?</p><ol class="MCAnswers">
+<li id="Q_0_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_0_Btn" onclick="CheckMCAnswer(0,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;How easy the information is to understand</li>
+<li id="Q_0_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_1_Btn" onclick="CheckMCAnswer(0,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The accuracy of the information</li>
+<li id="Q_0_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_2_Btn" onclick="CheckMCAnswer(0,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;How up-to-date the information is</li>
+<li id="Q_0_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_0_3_Btn" onclick="CheckMCAnswer(0,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;How much the information cost to produce</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_1" style="display: none;"><p class="QuestionText">Network management software is essential with a larger network. Which one of the following is not performed using network management software?</p><ol class="MCAnswers">
-<li id="Q_1_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Ensuring that all the applications users have installed are the latest versions</li>
-<li id="Q_1_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Finding out if a user is using licensed software</li>
-<li id="Q_1_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Keeping a database of customers and their orders</li>
-<li id="Q_1_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Providing a remote control facility so that help-desk staff can help users sort problems out</li>
+<li class="QuizQuestion" id="Q_1" style="display: none;"><p class="QuestionText">The quality of information affects decision making. Which one of the following is the best reason for this?</p><ol class="MCAnswers">
+<li id="Q_1_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_0_Btn" onclick="CheckMCAnswer(1,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;High quality information reduces the risk when making decisions</li>
+<li id="Q_1_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_1_Btn" onclick="CheckMCAnswer(1,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;It is impossible to make decisions without high quality information</li>
+<li id="Q_1_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_2_Btn" onclick="CheckMCAnswer(1,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Decisions can only be made using data</li>
+<li id="Q_1_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_1_3_Btn" onclick="CheckMCAnswer(1,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Information is turned into data for decision making</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_2" style="display: none;"><p class="QuestionText">&#x2018;This network topology makes use of a central contact point to connect all the network devices together.&#x2019; Which network topology is being described here?</p><ol class="MCAnswers">
-<li id="Q_2_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Bus</li>
-<li id="Q_2_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Ring</li>
-<li id="Q_2_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Mesh</li>
-<li id="Q_2_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Star</li>
+<li class="QuizQuestion" id="Q_2" style="display: none;"><p class="QuestionText">Which one of these features of information does not affect the quality of information?</p><ol class="MCAnswers">
+<li id="Q_2_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_0_Btn" onclick="CheckMCAnswer(2,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Accuracy</li>
+<li id="Q_2_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_1_Btn" onclick="CheckMCAnswer(2,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Relevance for a particular use</li>
+<li id="Q_2_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_2_Btn" onclick="CheckMCAnswer(2,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The completeness of the information</li>
+<li id="Q_2_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_2_3_Btn" onclick="CheckMCAnswer(2,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Whether or not the information has been produced using ICT</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_3" style="display: none;"><p class="QuestionText">&#x2018;A network that makes use of the fact that there are many paths data can take to get to its destination.&#x2019; Which network topology is being described here?</p><ol class="MCAnswers">
-<li id="Q_3_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Bus</li>
-<li id="Q_3_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Ring</li>
-<li id="Q_3_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Mesh</li>
-<li id="Q_3_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Star</li>
+<li class="QuizQuestion" id="Q_3" style="display: none;"><p class="QuestionText">A sales manager wants a printout of the value of	all the sales made to the twenty best customers in terms of the profit they make for the company. The clerk uses ICT to produce this information but gives the manager a list of the information for three hundred customers. Why is this not good quality information?</p><ol class="MCAnswers">
+<li id="Q_3_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_0_Btn" onclick="CheckMCAnswer(3,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The information is not accurate</li>
+<li id="Q_3_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_1_Btn" onclick="CheckMCAnswer(3,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The information is not easy to understand</li>
+<li id="Q_3_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_2_Btn" onclick="CheckMCAnswer(3,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The information is incomplete</li>
+<li id="Q_3_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_3_3_Btn" onclick="CheckMCAnswer(3,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The information has not been targeted correctly</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_4" style="display: none;"><p class="QuestionText">Which one of the following is not normally a cost associated with a network?</p><ol class="MCAnswers">
-<li id="Q_4_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Staffing costs</li>
-<li id="Q_4_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Data entry costs</li>
-<li id="Q_4_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Training costs</li>
-<li id="Q_4_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Cost of third party communication lines</li>
+<li class="QuizQuestion" id="Q_4" style="display: none;"><p class="QuestionText">A customer is told an item is in stock when it isn&#x2019;t. The customer orders the item and then complains about the delivery time. Information about stock details was which one of these?</p><ol class="MCAnswers">
+<li id="Q_4_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_0_Btn" onclick="CheckMCAnswer(4,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Incomplete</li>
+<li id="Q_4_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_1_Btn" onclick="CheckMCAnswer(4,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Correctly targeted</li>
+<li id="Q_4_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_2_Btn" onclick="CheckMCAnswer(4,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Not up-to-date</li>
+<li id="Q_4_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_4_3_Btn" onclick="CheckMCAnswer(4,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Not easy to understand</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_5" style="display: none;"><p class="QuestionText">Which one of the following is a disadvantage of a peer-to-peer network?</p><ol class="MCAnswers">
-<li id="Q_5_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Backups cannot be made centrally</li>
-<li id="Q_5_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;There is no network manager in overall charge of the network</li>
-<li id="Q_5_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;There are lower operating costs</li>
-<li id="Q_5_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;They are very easy to set up</li>
+<li class="QuizQuestion" id="Q_5" style="display: none;"><p class="QuestionText">The manager asks for a credit report which contains lots of codes and numbers which she does not understand. The information is poor quality for which one of the following reasons? </p><ol class="MCAnswers">
+<li id="Q_5_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_0_Btn" onclick="CheckMCAnswer(5,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;It is not relevant</li>
+<li id="Q_5_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_1_Btn" onclick="CheckMCAnswer(5,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;It is not up-to-date</li>
+<li id="Q_5_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_2_Btn" onclick="CheckMCAnswer(5,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;It is not complete</li>
+<li id="Q_5_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_5_3_Btn" onclick="CheckMCAnswer(5,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;It is not easy to understand</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_6" style="display: none;"><p class="QuestionText">Which one of the following is an advantage of a client&#x2013;server network?</p><ol class="MCAnswers">
-<li id="Q_6_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;They are expensive because expensive servers are needed</li>
-<li id="Q_6_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Security is improved because a single person is given responsibility for the whole network</li>
-<li id="Q_6_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Specialist knowledge is needed to set them up</li>
-<li id="Q_6_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The software needed is sophisticated and expensive</li>
+<li class="QuizQuestion" id="Q_6" style="display: none;"><p class="QuestionText">A user of information has spotted that the information supplied by the ICT system often contains mistakes. This is a problem that causes which one of these?</p><ol class="MCAnswers">
+<li id="Q_6_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_0_Btn" onclick="CheckMCAnswer(6,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Lack of user confidence</li>
+<li id="Q_6_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_1_Btn" onclick="CheckMCAnswer(6,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Lack of user awareness</li>
+<li id="Q_6_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_2_Btn" onclick="CheckMCAnswer(6,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Lack of targeting of the information</li>
+<li id="Q_6_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_6_3_Btn" onclick="CheckMCAnswer(6,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Lack of completeness of the information</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_7" style="display: none;"><p class="QuestionText">Which one of the following is not a network topology?</p><ol class="MCAnswers">
-<li id="Q_7_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Star</li>
-<li id="Q_7_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Bus</li>
-<li id="Q_7_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Sun</li>
-<li id="Q_7_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Ring</li>
+<li class="QuizQuestion" id="Q_7" style="display: none;"><p class="QuestionText">Which one of the following would not cause personal data to need updating?</p><ol class="MCAnswers">
+<li id="Q_7_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_0_Btn" onclick="CheckMCAnswer(7,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Moving house</li>
+<li id="Q_7_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_1_Btn" onclick="CheckMCAnswer(7,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Change of name</li>
+<li id="Q_7_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_2_Btn" onclick="CheckMCAnswer(7,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Change of bank account details</li>
+<li id="Q_7_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_7_3_Btn" onclick="CheckMCAnswer(7,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Change of car</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_8" style="display: none;"><p class="QuestionText">A sequence of characters that is kept secret from<br />others that the user enters to gain access to the network is called which one of these?</p><ol class="MCAnswers">
-<li id="Q_8_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Password</li>
-<li id="Q_8_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Username</li>
-<li id="Q_8_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;User log</li>
-<li id="Q_8_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;User account</li>
+<li class="QuizQuestion" id="Q_8" style="display: none;"><p class="QuestionText">Which one of the following is not an on-line source of information?</p><ol class="MCAnswers">
+<li id="Q_8_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_0_Btn" onclick="CheckMCAnswer(8,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;A web page containing information about a school</li>
+<li id="Q_8_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_1_Btn" onclick="CheckMCAnswer(8,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Information on an intranet</li>
+<li id="Q_8_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_2_Btn" onclick="CheckMCAnswer(8,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Paper-based records</li>
+<li id="Q_8_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_8_3_Btn" onclick="CheckMCAnswer(8,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;The Internet</li>
 </ol></li>
-<li class="QuizQuestion" id="Q_9" style="display: none;"><p class="QuestionText">Which one of the following statements is false?</p><ol class="MCAnswers">
-<li id="Q_9_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Use of passwords and user-IDs ensures that access is restricted to authorised users</li>
-<li id="Q_9_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Firewalls can be software, hardware or both and protect the network from hackers</li>
-<li id="Q_9_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Encryption is used to keep data secret when being sent over networks</li>
-<li id="Q_9_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Log-in means informing the network you want to close access to the network facilities</li>
+<li class="QuizQuestion" id="Q_9" style="display: none;"><p class="QuestionText">Which one of the following is not a reason why many companies keep nearly all their information sources on-line?</p><ol class="MCAnswers">
+<li id="Q_9_0"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_0_Btn" onclick="CheckMCAnswer(9,0,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;On-line information can be accessed by everyone in the organisation</li>
+<li id="Q_9_1"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_1_Btn" onclick="CheckMCAnswer(9,1,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Keeping information on-line saves storage space</li>
+<li id="Q_9_2"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_2_Btn" onclick="CheckMCAnswer(9,2,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;It is much easier to find the information on-line</li>
+<li id="Q_9_3"><button class="FuncButton" onfocus="FuncBtnOver(this)" onblur="FuncBtnOut(this)" onmouseover="FuncBtnOver(this)" onmouseout="FuncBtnOut(this)" onmousedown="FuncBtnDown(this)" onmouseup="FuncBtnOut(this)" id="Q_9_3_Btn" onclick="CheckMCAnswer(9,3,this)">&nbsp;&nbsp;?&nbsp;&nbsp;</button>&nbsp;&nbsp;Information sources on-line are more accurate</li>
 </ol></li>
 </ol>
 
@@ -1931,7 +1927,7 @@ function getElementsByClassName(oElm, strTagName, oClassNames){
 
 
 
-<!-- BeginSubmissionForm --><form action="http://websites.bordengrammar.kent.sch.uk/moodle/mod/hotpot/attempt.php" method="post" id="store" onsubmit="this.target='_top';"><fieldset style="display:none"><input type="hidden" name="attemptid" value="2227" /><input type="hidden" name="starttime" value="" /><input type="hidden" name="endtime" value="" /><input type="hidden" name="mark" value="" /><input type="hidden" name="detail" value="" /><input type="hidden" name="status" value="" /></fieldset></form><!-- EndSubmissionForm -->
+<!-- BeginSubmissionForm --><form action="http://websites.bordengrammar.kent.sch.uk/moodle/mod/hotpot/attempt.php" method="post" id="store" onsubmit="this.target='_top';"><fieldset style="display:none"><input type="hidden" name="attemptid" value="3203" /><input type="hidden" name="starttime" value="" /><input type="hidden" name="endtime" value="" /><input type="hidden" name="mark" value="" /><input type="hidden" name="detail" value="" /><input type="hidden" name="status" value="" /></fieldset></form><!-- EndSubmissionForm -->
 
 <script type="text/javascript">
 //<![CDATA[
@@ -1952,20 +1948,18 @@ function getElementsByClassName(oElm, strTagName, oClassNames){
 def main():
     start = (code.find('I=new Array();'))
     end = (code.find('function StartUp()'))
-    x = 0
     arrays = ''
-    while (x < len(code)):
-        if x <= end and x>= start:
-            arrays += code[x]
-        x += 1
+    for x in range(start,end):
+    	arrays+=code[x]
     print arrays
     arraylinesplit = arrays.splitlines()
-    x=0
     questionno=0
-    #loops lines
-    while (x < len(arraylinesplit)):
-        #checks to see if it is correct answer
-        if ('100' in arraylinesplit[x]) and (not '= 100' in arraylinesplit[x]):
+    weighting = str(100)
+    #goes through the questions finding those with a weighting of 100
+    for x in range(0, len(arraylinesplit)):
+		#checks to see if it is correct answer
+        if (weighting in arraylinesplit[x]) and (not ('= ' + weighting) in arraylinesplit[x]):
+        	#Splits the arrays up and selects the question array
             stringarray = arraylinesplit[x].split('[')
             questiondigit = stringarray[3][0]
             answer = ''
@@ -1976,7 +1970,6 @@ def main():
             else:
                 print (str(questionno + 1) + '       ' + answer)
             questionno += 1
-        x += 1
 
 if __name__ == '__main__':
     main()
